@@ -9,7 +9,7 @@ render = False # It is funnier if the game is displayed on the screen
 clone_seeds = True  # This will speed things up a bit
 max_steps = 1e6  # Play until the game is finished.
 n_repeat_action = 1  # Atari games run at 20 fps, so taking 4 actions per seconds is more
-reward_limit = 20000
+reward_limit = 21
 render_every = 2
 dt_mean = 3
 dt_std = 2
@@ -31,4 +31,4 @@ fmc = FractalMC(model=model, env=env, max_walkers=max_walkers,
 
 
 fmc.run_agent(render=False, print_swarm=False)
-fmc.render_game(sleep=1/40)
+#fmc.render_game(sleep=1/40)
