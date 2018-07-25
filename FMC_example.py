@@ -4,7 +4,7 @@ from fractalai.fractalmc import FractalMC
 
 
 
-name = "Pong-v0"
+name = "Pong-ram-v0"
 render = False # It is funnier if the game is displayed on the screen
 clone_seeds = True  # This will speed things up a bit
 max_steps = 1e6  # Play until the game is finished.
@@ -16,12 +16,12 @@ dt_std = 2
 min_dt = 3
 
 
-max_samples = 6000  # Let see how well it can perform using at most 300 samples per step
+max_samples = 3000  # Let see how well it can perform using at most 300 samples per step
 max_walkers = 100 # Let's set a really small number to make everthing faster
 time_horizon = 30  # 50 frames should be enough to realise you have been eaten by a ghost
 
 env = ParallelEnvironment(name=name,env_class=AtariEnvironment,
-                          blocking=False, n_workers=8, n_repeat_action=n_repeat_action)  # We will play an Atari game
+                          blocking=False, n_workers=16, n_repeat_action=n_repeat_action)  # We will play an Atari game
 model = RandomDiscreteModel(max_wakers=max_walkers,
                             n_actions=env.n_actions) # The Agent will take discrete actions at random
 
