@@ -229,6 +229,7 @@ class FractalMC(Swarm):
             self._agent_reward += _reward
             self._last_action = action
             end = info.get("terminal", _end)
+            print("i_step,_reward,_end",i_step,_reward,_end)
             if _end:
                 print('ep %d: resetting env. episode reward total was %f' % (i_step, reward_sum))
 
