@@ -4,19 +4,19 @@ from fractalai.fractalmc import FractalMC
 
 
 
-name = "Pong-ram-v0"
+name = "MontezumaRevenge-ram-v0"
 render = False # It is funnier if the game is displayed on the screen
 clone_seeds = True  # This will speed things up a bit
 max_steps = 1e6  # Play until the game is finished.
 n_repeat_action = 1  # Atari games run at 20 fps, so taking 4 actions per seconds is more
-reward_limit = 21
+reward_limit = 20000
 render_every = 2
 dt_mean = 3
 dt_std = 2
 min_dt = 3
 
 
-max_samples = 3000  # Let see how well it can perform using at most 300 samples per step
+max_samples = 6000  # Let see how well it can perform using at most 300 samples per step
 max_walkers = 100 # Let's set a really small number to make everthing faster
 time_horizon = 30  # 50 frames should be enough to realise you have been eaten by a ghost
 
